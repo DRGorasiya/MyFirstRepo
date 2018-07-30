@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+
+<?import org.controlsfx.glyphfont.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml">
+	<top>
+		<ToolBar>
+			<items>
+				<Button onAction="#startMining">
+					<tooltip><Tooltip text="Start" /></tooltip>
+					<graphic><Glyph fontFamily="FontAwesome" icon="HOME" /></graphic>
+				</Button>
+				<Button>
+					<tooltip><Tooltip text="Home" /></tooltip>
+					<graphic><Glyph fontFamily="FontAwesome" icon="HOME" /></graphic>
+				</Button>
+				<ToggleButton>
+					<tooltip><Tooltip text="Menus" /></tooltip>
+					<graphic><Glyph fontFamily="FontAwesome" icon="BARS" /></graphic>
+				</ToggleButton>
+				<Button onAction="#showWebsite">
+					<tooltip><Tooltip text="Web" /></tooltip>
+					<graphic><Glyph fontFamily="FontAwesome" icon="GLOBE" /></graphic>
+				</Button>
+				<Button>
+					<tooltip><Tooltip text="Sign In" /></tooltip>
+					<graphic><Glyph fontFamily="FontAwesome" icon="SIGN_IN" /></graphic>
+				</Button>
+				<Button>
+					<tooltip><Tooltip text="Sign Out" /></tooltip>
+					<graphic><Glyph fontFamily="FontAwesome" icon="SIGN_OUT" /></graphic>
+				</Button>
+				<Button onAction="#close">
+					<tooltip><Tooltip text="Close" /></tooltip>
+					<graphic><Glyph fx:id="closeBtn" fontFamily="FontAwesome" icon="POWER_OFF" /></graphic>
+				</Button>
+			</items>
+		</ToolBar>
+	</top>
+
+	<center>
+		<ScrollPane fx:id="content" fitToWidth="true" fitToHeight="true"
+			BorderPane.alignment="TOP_CENTER" />
+	</center>
+
+	<stylesheets>
+		<URL value="@/css/default.css" />
+	</stylesheets>
+
+</BorderPane>
